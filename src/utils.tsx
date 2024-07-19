@@ -106,12 +106,13 @@ export const genZheShiNoun = (isColored: boolean) => {
 export const genGeneralQuestion = (isColored: boolean) => {
     const pr1 = pronounces[randomIntFromInterval(1, pronounces.length) - 1];
     const n = nouns[randomIntFromInterval(1, nouns.length) - 1];
+    const v = verbs[randomIntFromInterval(1, verbs.length) - 1];
 
     if(randomIntFromInterval(1, 99)%10%2) {
         return {
             sentence: [
                 ...getPart(pr1, isColored),
-                ...getPart(verbs[0], isColored),
+                ...getPart(v, isColored),
                 ...getPart(n, isColored),
                 ...getPart(techWords[1], isColored),
                 <div style={{
@@ -120,7 +121,7 @@ export const genGeneralQuestion = (isColored: boolean) => {
             ],
             words: [
                 pr1,
-                verbs[0],
+                v,
                 n,
                 techWords[1],
             ]
@@ -129,14 +130,14 @@ export const genGeneralQuestion = (isColored: boolean) => {
         return {
             sentence: [
                 ...getPart(pr1, isColored),
-                ...getPart(verbs[0], isColored),
+                ...getPart(v, isColored),
                 ...getPart(techWords[0], isColored),
-                ...getPart(verbs[0], isColored),
+                ...getPart(v, isColored),
                 ...getPart(nouns[0], isColored),
             ],
             words: [
                 pr1,
-                verbs[0],
+                v,
                 nouns[0],
                 techWords[0],
             ]
@@ -157,6 +158,7 @@ export const genNumbers = (isColored: boolean) => {
 export const genPronounces = (isColored: boolean) => {
     const pr1 = pronounces[randomIntFromInterval(1, pronounces.length) - 1];
     const pr2 = pronounces[randomIntFromInterval(1, pronounces.length) - 1];
+    const v = verbs[randomIntFromInterval(1, verbs.length) - 1];
     const n = nouns[randomIntFromInterval(1, nouns.length) - 1];
 
     if(randomIntFromInterval(1, 99)%10%2) {
@@ -164,7 +166,7 @@ export const genPronounces = (isColored: boolean) => {
             sentence: [
                 ...getPart(pr1, isColored),
                 ...getPart(techWords[0], isColored),
-                ...getPart(verbs[0], isColored),
+                ...getPart(v, isColored),
                 ...getPart(pr2, isColored),
                 ...getPart(techWords[2], isColored),
                 ...getPart(n, isColored),
@@ -172,7 +174,7 @@ export const genPronounces = (isColored: boolean) => {
             words: [
                 pr1,
                 techWords[0],
-                verbs[0],
+                v,
                 pr2,
                 techWords[2],
                 n,

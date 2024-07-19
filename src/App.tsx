@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import './App.css';
 import { getExample } from './utils';
-// import { words } from './mockWords';
+import { words } from './mockWords';
 
 function App() {
-    const [exampleType, setExampleType] = useState("Numbers")
+    const [exampleType, setExampleType] = useState("Pronounces")
     const [tumbler, setTumbler] = useState(false)
     const [isColored, setIsColored] = useState(true)
 
@@ -26,16 +26,16 @@ function App() {
             </tr>
         )
     });
-    // const dict = words.map((word) => {
-    //     return (
-    //         <tr>
-    //             <td>{word.hieroglyphCode}</td>
-    //             <td>{word.pinyin}</td>
-    //             <td>{word.tone}</td>
-    //             <td>{word.translation}</td>
-    //         </tr>
-    //     )
-    // });
+    const dict = words.map((word) => {
+        return (
+            <tr>
+                <td>{word.hieroglyphCode}</td>
+                <td>{word.pinyin}</td>
+                <td>{word.tone}</td>
+                <td>{word.translation}</td>
+            </tr>
+        )
+    });
 
     const generate = () => {
         ex = getExample(exampleType, isColored);
@@ -151,7 +151,21 @@ function App() {
                         <td>Перевод</td>
                     </tr>
                     {allWords}
-                    {/* {dict} */}
+                </table>
+
+                <table
+                    border={1}
+                    bgcolor="#edddaf"
+                    width={350}
+                    >
+                    <caption>Весь словарь</caption>
+                    <tr>
+                        <td>Иероглиф</td>
+                        <td>Пиньинь</td>
+                        <td>Тон</td>
+                        <td>Перевод</td>
+                    </tr>
+                    {dict}
                 </table>
             </div>
         </>
