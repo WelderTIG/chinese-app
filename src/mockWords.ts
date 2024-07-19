@@ -400,6 +400,30 @@ export const techWords: IWord[] = [
         lastProposalDate: '',
         description: '',
     },
+    {
+        id: 'u8FD9',
+        hieroglyphCode: ['\u8FD9'],
+        pinyin: 'zhe',
+        tone: [Tone.FOUR],
+        translation: 'Это/этот',
+        wordType: WordType.DEFAULT,
+        weight: 0,
+        creationDate: '',
+        lastProposalDate: '',
+        description: '',
+    },
+    {
+        id: 'u90A3',
+        hieroglyphCode: ['\u90A3'],
+        pinyin: 'na',
+        tone: [Tone.FOUR],
+        translation: 'То/тот',
+        wordType: WordType.DEFAULT,
+        weight: 0,
+        creationDate: '',
+        lastProposalDate: '',
+        description: '',
+    },
 ]
 
 export const words: IWord[] = [
