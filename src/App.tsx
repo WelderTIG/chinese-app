@@ -72,7 +72,8 @@ function App() {
                     <div style={{
                             display: "flex",
                             flexDirection: "row",
-                            justifyContent: "center"
+                            justifyContent: "center",
+                            marginBottom: 50
                         }}>
                         {phrase}
                     </div>
