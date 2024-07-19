@@ -305,18 +305,6 @@ export const verbs: IWord[] = [
         description: '',
     },
     {
-        id: 'u89C6',
-        hieroglyphCode: ['\u89C6'],
-        pinyin: 'shi',
-        tone: [Tone.FOUR],
-        translation: 'Видеть',
-        wordType: WordType.DEFAULT,
-        weight: 0,
-        creationDate: '',
-        lastProposalDate: '',
-        description: '',
-    },
-    {
         id: 'u6709',
         hieroglyphCode: ['\u6709'],
         pinyin: 'you',

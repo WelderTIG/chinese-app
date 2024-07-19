@@ -184,14 +184,14 @@ export const genPronounces = (isColored: boolean) => {
         return {
             sentence: [
                 ...getPart(pr1, isColored),
-                ...getPart(verbs[0], isColored),
+                ...getPart(v, isColored),
                 ...getPart(pr2, isColored),
                 ...getPart(techWords[2], isColored),
                 ...getPart(n, isColored),
             ],
             words: [
                 pr1,
-                verbs[0],
+                v,
                 pr2,
                 techWords[2],
                 n,
