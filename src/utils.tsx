@@ -187,16 +187,18 @@ export const genPronounces = (isColored: boolean) => {
                 ...getPart(techWords[0], isColored),
                 ...getPart(v, isColored),
                 ...getPart(pr2, isColored),
-                // ...getPart(techWords[2], isColored),
-                // ...getPart(n, isColored),
+                ...getPart(techWords[2], isColored),
+                ...getPart(adjectives[0], isColored),
+                ...getPart(nouns[1], isColored),
             ],
             words: [
                 pr1,
                 techWords[0],
                 v,
                 pr2,
-                // techWords[2],
-                // n,
+                techWords[2],
+                adjectives[0],
+                nouns[1],
             ]
         }
     } else {
@@ -205,15 +207,17 @@ export const genPronounces = (isColored: boolean) => {
                 ...getPart(pr1, isColored),
                 ...getPart(v, isColored),
                 ...getPart(pr2, isColored),
-                // ...getPart(techWords[2], isColored),
-                // ...getPart(n, isColored),
+                ...getPart(techWords[2], isColored),
+                ...getPart(adjectives[0], isColored),
+                ...getPart(nouns[1], isColored),
             ],
             words: [
                 pr1,
                 v,
                 pr2,
-                // techWords[2],
-                // n,
+                techWords[2],
+                adjectives[0],
+                nouns[1],
             ]
         }
     }
