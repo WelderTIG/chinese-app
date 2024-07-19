@@ -1,19 +1,19 @@
 
 import React, { useState } from 'react';
 import './App.css';
-import { getExample } from './utils';
-import { words } from './mockWords';
+import { getExample, getWords } from './generator';
 
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
     const [isColored, setIsColored] = useState(true)
+    const [isPublic, setIsPublic] = useState(true)
 
     const onOptionChange = (e: any) => {
         setExampleType(e.target.value)
     }
 
-    let ex = getExample(exampleType, isColored);
+    let ex = getExample(exampleType, isColored, isPublic);
 
     const phrase = ex.sentence
     const allWords = ex.words.map((word) => {
@@ -26,7 +26,7 @@ function App() {
             </tr>
         )
     });
-    const dict = words.map((word) => {
+    const dict = getWords(isPublic).map((word) => {
         return (
             <tr>
                 <td>{word.hieroglyphCode}</td>
@@ -38,11 +38,14 @@ function App() {
     });
 
     const generate = () => {
-        ex = getExample(exampleType, isColored);
+        ex = getExample(exampleType, isColored, isPublic);
         setTumbler(!tumbler)
     }
     const handleIsColoredChange = () => {
         setIsColored(!isColored)
+    }
+    const handleIsPublicChange = () => {
+        setIsPublic(!isPublic)
     }
 
     return (
@@ -70,7 +73,6 @@ function App() {
                         {phrase}
                     </div>
 
-
                     <div style={{
                             display: "flex",
                             flexDirection: "row",
@@ -86,7 +88,6 @@ function App() {
                             }}>Generate
                         </button>
                     </div>
-
 
                     <div style={{
                             display: "flex",
@@ -167,6 +168,16 @@ function App() {
                     </tr>
                     {dict}
                 </table>
+
+
+                <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center"
+                    }}>
+                    <p>Dictionary</p>
+                    <input type="checkbox" checked={isPublic} onChange={handleIsPublicChange} />
+                </div>
             </div>
         </>
     );
