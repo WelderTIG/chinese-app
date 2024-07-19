@@ -240,6 +240,17 @@ export const genPronounces = (isColored: boolean, dict: IDict) => {
         }
     }
 }
+export const getPhrases = (isColored: boolean, dict: IDict) => {
+    const phr = dict.phrases[randomIntFromInterval(1, dict.phrases.length) - 1];
+    return {
+        sentence: [
+            ...getPart(phr, isColored),
+        ],
+        words: [
+            phr,
+        ]
+    }
+}
 
 export const getExample = (exampleType: string, isColored: boolean, isPublic: boolean) => {
     switch (exampleType) {
@@ -251,6 +262,8 @@ export const getExample = (exampleType: string, isColored: boolean, isPublic: bo
             return genPronounces(isColored, getDictionary(isPublic));
         case 'Numbers':
             return genNumbers(isColored, getDictionary(isPublic));
+        case 'Phrases':
+            return getPhrases(isColored, getDictionary(isPublic));
         default:
             return {
                 sentence: [],

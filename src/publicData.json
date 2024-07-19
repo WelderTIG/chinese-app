@@ -194,9 +194,17 @@
     "phrases": [
         {
             "hieroglyphCode": ["\u4F60", "\u597D"],
-            "pinyin": "nihao",
+            "pinyin": "nǐhǎo",
             "tone": [3, 3],
-            "translation": "привет",
+            "translation": "Привет",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["请", "问"],
+            "pinyin": "qǐngwèn",
+            "tone": [3, 2],
+            "translation": "Позвольте спросить",
             "wordType": "",
             "description": ""
         }

@@ -137,6 +137,26 @@ function App() {
                         <label htmlFor="numbers">Numbers</label>
                     </div>
 
+                    <div style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            alignContent: 'center',
+                            marginTop: 15
+                        }}>
+                        <input
+                            type="radio"
+                            name="exampleType"
+                            value="Phrases"
+                            id="phrases"
+                            checked={exampleType === "Phrases"}
+                            onChange={onOptionChange}
+                        />
+                        <label htmlFor="phrases">Phrases</label>
+
+                    </div>
+
+
                 </div>
 
                 <table

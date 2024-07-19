@@ -1,5 +1,5 @@
 import data from './data.json';
-import publicData from './data.json';
+import publicData from './publicData.json';
 
 
 export enum Tone {
