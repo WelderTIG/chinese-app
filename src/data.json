@@ -189,6 +189,30 @@
             "translation": "Большой",
             "wordType": "",
             "description": ""
+        },
+        {
+            "hieroglyphCode": ["昨", "天"],
+            "pinyin": "zuótiān",
+            "tone": [2, 1],
+            "translation": "Вчера",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["今", "天"],
+            "pinyin": "jīntiān",
+            "tone": [1, 1],
+            "translation": "Сегодня",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["明", "天"],
+            "pinyin": "míngtiān",
+            "tone": [2, 1],
+            "translation": "Завтра",
+            "wordType": "",
+            "description": ""
         }
     ],
     "phrases": [
@@ -247,6 +271,14 @@
             "pinyin": "nà",
             "tone": [4],
             "translation": "То/тот",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["正", "在"],
+            "pinyin": "zhèngzài",
+            "tone": [4, 4],
+            "translation": "Частица в данный момент",
             "wordType": "",
             "description": ""
         }

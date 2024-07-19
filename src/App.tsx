@@ -143,24 +143,65 @@ function App() {
                         <label htmlFor="numbers">Numbers</label>
                     </div>
 
-                    <div style={{
+                    {isPublic && (
+                        <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "center",
+                                alignContent: 'center',
+                                marginTop: 15
+                            }}>
+                            <input
+                                type="radio"
+                                name="exampleType"
+                                value="Phrases"
+                                id="phrases"
+                                checked={exampleType === "Phrases"}
+                                onChange={onOptionChange}
+                            />
+                            <label htmlFor="phrases">Phrases</label>
+                        </div>
+                    )}
+
+                    {!isPublic && (
+                        <div style={{
                             display: "flex",
                             flexDirection: "row",
                             justifyContent: "center",
                             alignContent: 'center',
                             marginTop: 15
                         }}>
-                        <input
-                            type="radio"
-                            name="exampleType"
-                            value="Phrases"
-                            id="phrases"
-                            checked={exampleType === "Phrases"}
-                            onChange={onOptionChange}
-                        />
-                        <label htmlFor="phrases">Phrases</label>
+                            <input
+                                type="radio"
+                                name="exampleType"
+                                value="Phrases"
+                                id="phrases"
+                                checked={exampleType === "Phrases"}
+                                onChange={onOptionChange}
+                            />
+                            <label htmlFor="phrases">Phrases</label>
 
-                    </div>
+                            <input
+                                    type="radio"
+                                    name="exampleType"
+                                    value="PPF"
+                                    id="ppf"
+                                    checked={exampleType === "PPF"}
+                                    onChange={onOptionChange}
+                                />
+                            <label htmlFor="ppf">PPF</label>
+
+                            <input
+                                type="radio"
+                                name="exampleType"
+                                value="InMoment"
+                                id="inMoment"
+                                checked={exampleType === "InMoment"}
+                                onChange={onOptionChange}
+                            />
+                            <label htmlFor="inMoment">InMoment</label>
+                        </div>
+                    )}
 
 
                 </div>

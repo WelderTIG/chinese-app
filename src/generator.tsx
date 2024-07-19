@@ -240,7 +240,7 @@ export const genPronounces = (isColored: boolean, dict: IDict) => {
         }
     }
 }
-export const getPhrases = (isColored: boolean, dict: IDict) => {
+export const genPhrases = (isColored: boolean, dict: IDict) => {
     const phr = dict.phrases[randomIntFromInterval(1, dict.phrases.length) - 1];
     return {
         sentence: [
@@ -248,6 +248,56 @@ export const getPhrases = (isColored: boolean, dict: IDict) => {
         ],
         words: [
             phr,
+        ]
+    }
+}
+export const genPPF = (isColored: boolean, dict: IDict) => {
+    const rnd = randomIntFromInterval(1, 3);
+    let ppf;
+    if (rnd === 1) {
+        ppf = dict.adjectives[3];
+    }
+    if (rnd === 2) {
+        ppf = dict.adjectives[4];
+    }
+    if (rnd === 3) {
+        ppf = dict.adjectives[5];
+    }
+    const pr = genPronounces(isColored, dict)
+    return {
+        sentence: [
+            ...getPart(ppf!, isColored),
+            ...pr.sentence
+        ],
+        words: [
+            ppf!,
+            ...pr.words
+        ]
+    }
+}
+export const genInMoment = (isColored: boolean, dict: IDict) => {
+    const pr1 = dict.pronounces[randomIntFromInterval(1, dict.pronounces.length) - 1];
+    const inmmnt = dict.techWords[5];
+    const pr2 = dict.pronounces[randomIntFromInterval(1, dict.pronounces.length) - 1];
+    const v = dict.verbs[randomIntFromInterval(1, dict.verbs.length) - 1];
+    return {
+        sentence: [
+            ...getPart(pr1, isColored),
+            ...getPart(inmmnt, isColored),
+            ...getPart(v, isColored),
+            ...getPart(pr2, isColored),
+            ...getPart(dict.techWords[2], isColored),
+            ...getPart(dict.adjectives[0], isColored),
+            ...getPart(dict.nouns[1], isColored),
+        ],
+        words: [
+            pr1,
+            inmmnt,
+            v,
+            pr2,
+            dict.techWords[2],
+            dict.adjectives[0],
+            dict.nouns[1],
         ]
     }
 }
@@ -263,7 +313,11 @@ export const getExample = (exampleType: string, isColored: boolean, isPublic: bo
         case 'Numbers':
             return genNumbers(isColored, getDictionary(isPublic));
         case 'Phrases':
-            return getPhrases(isColored, getDictionary(isPublic));
+            return genPhrases(isColored, getDictionary(isPublic));
+        case 'PPF':
+            return genPPF(isColored, getDictionary(isPublic));
+        case 'InMoment':
+            return genInMoment(isColored, getDictionary(isPublic));
         default:
             return {
                 sentence: [],
