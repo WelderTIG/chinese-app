@@ -57,23 +57,23 @@ export const publicDict = {
 }
 
 export const words: IWord[] = [
-    ...data.pronounces,
+    ...data.phrases,
     ...data.verbs,
     ...data.nouns,
     ...data.adjectives,
-    ...data.phrases,
-    ...data.techWords,
     ...data.numbers,
+    ...data.techWords,
     ...data.colors,
+    ...data.pronounces,
 ]
 
 export const publicWords: IWord[] = [
-    ...publicData.pronounces,
+    ...publicData.phrases,
     ...publicData.verbs,
     ...publicData.nouns,
     ...publicData.adjectives,
-    ...publicData.phrases,
-    ...publicData.techWords,
     ...publicData.numbers,
+    ...publicData.techWords,
     ...publicData.colors,
+    ...publicData.pronounces,
 ]
