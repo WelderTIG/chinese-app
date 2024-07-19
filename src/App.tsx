@@ -8,7 +8,8 @@ function App() {
     const [tumbler, setTumbler] = useState(false)
     const [isColored, setIsColored] = useState(true)
     const [isPublic, setIsPublic] = useState(true)
-
+    const [isDictVisible, setIsDictVisible] = useState(false)
+    
     const onOptionChange = (e: any) => {
         setExampleType(e.target.value)
     }
@@ -47,7 +48,10 @@ function App() {
     const handleIsPublicChange = () => {
         setIsPublic(!isPublic)
     }
-
+    const handleIsDictVisibleChange = () => {
+        setIsDictVisible(!isDictVisible)
+    }
+    
     return (
         <>
             <div style={{
@@ -87,6 +91,8 @@ function App() {
                                 width: 250
                             }}>Generate
                         </button>
+                        <input type="checkbox" checked={isDictVisible} onChange={handleIsDictVisibleChange} />
+                        <p>Dictionary</p>
                     </div>
 
                     <div style={{
@@ -158,46 +164,49 @@ function App() {
 
 
                 </div>
+                {isDictVisible && (
+                    <div>
+                        <table
+                            border={1}
+                            bgcolor="#d6d5f5"
+                            width={350}
+                            >
+                            <caption>Используемые слова</caption>
+                            <tr>
+                                <td>Иероглиф</td>
+                                <td>Пиньинь</td>
+                                <td>Тон</td>
+                                <td>Перевод</td>
+                            </tr>
+                            {allWords}
+                        </table>
 
-                <table
-                    border={1}
-                    bgcolor="#d6d5f5"
-                    width={350}
-                    >
-                    <caption>Используемые слова</caption>
-                    <tr>
-                        <td>Иероглиф</td>
-                        <td>Пиньинь</td>
-                        <td>Тон</td>
-                        <td>Перевод</td>
-                    </tr>
-                    {allWords}
-                </table>
-
-                <table
-                    border={1}
-                    bgcolor="#edddaf"
-                    width={350}
-                    >
-                    <caption>Весь словарь</caption>
-                    <tr>
-                        <td>Иероглиф</td>
-                        <td>Пиньинь</td>
-                        <td>Тон</td>
-                        <td>Перевод</td>
-                    </tr>
-                    {dict}
-                </table>
+                        <table
+                            border={1}
+                            bgcolor="#edddaf"
+                            width={350}
+                            >
+                            <caption>Весь словарь</caption>
+                            <tr>
+                                <td>Иероглиф</td>
+                                <td>Пиньинь</td>
+                                <td>Тон</td>
+                                <td>Перевод</td>
+                            </tr>
+                            {dict}
+                        </table>
 
 
-                <div style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center"
-                    }}>
-                    <p>Dictionary</p>
-                    <input type="checkbox" checked={isPublic} onChange={handleIsPublicChange} />
-                </div>
+                        <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "center"
+                            }}>
+                            <p>Dictionary</p>
+                            <input type="checkbox" checked={isPublic} onChange={handleIsPublicChange} />
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     );
