@@ -205,7 +205,7 @@ export const getExample = (exampleType: string, isColored: boolean) => {
             return genZheShiNoun(isColored);
         case 'GenQuest':
             return genGeneralQuestion(isColored);
-        case 'Pronounces':
+        case 'Pronouns':
             return genPronounces(isColored);
         case 'Numbers':
             return genNumbers(isColored);

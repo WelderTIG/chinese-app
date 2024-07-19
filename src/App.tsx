@@ -5,7 +5,7 @@ import { getExample } from './utils';
 import { words } from './mockWords';
 
 function App() {
-    const [exampleType, setExampleType] = useState("Pronounces")
+    const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
     const [isColored, setIsColored] = useState(true)
 
@@ -118,12 +118,12 @@ function App() {
                         <input
                             type="radio"
                             name="exampleType"
-                            value="Pronounces"
-                            id="pronounces"
-                            checked={exampleType === "Pronounces"}
+                            value="Pronouns"
+                            id="pronouns"
+                            checked={exampleType === "Pronouns"}
                             onChange={onOptionChange}
                         />
-                        <label htmlFor="pronounces">Pronounces</label>
+                        <label htmlFor="pronouns">Pronouns</label>
 
                         <input
                             type="radio"
