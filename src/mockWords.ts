@@ -328,6 +328,18 @@ export const verbs: IWord[] = [
         lastProposalDate: '',
         description: '',
     },
+    {
+        id: 'u77E5u9053',
+        hieroglyphCode: ['\u77E5', '\u9053'],
+        pinyin: 'you',
+        tone: [Tone.ONE, Tone.ZERO],
+        translation: 'Знать',
+        wordType: WordType.DEFAULT,
+        weight: 0,
+        creationDate: '',
+        lastProposalDate: '',
+        description: '',
+    },
 ]
 // Существительные
 export const nouns: IWord[] = [
