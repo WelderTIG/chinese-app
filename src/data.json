@@ -1,0 +1,370 @@
+{
+    "pronounces": [
+        {
+            "hieroglyphCode": ["\u6211"],
+            "pinyin": "wo",
+            "tone": [3],
+            "translation": "Я",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4F60"],
+            "pinyin": "ni",
+            "tone": [3],
+            "translation": "Ты",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4ED6"],
+            "pinyin": "ta",
+            "tone": [1],
+            "translation": "Он",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5979"],
+            "pinyin": "ta",
+            "tone": [1],
+            "translation": "Она",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5B83"],
+            "pinyin": "ta",
+            "tone": [1],
+            "translation": "Оно",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u60A8"],
+            "pinyin": "nin",
+            "tone": [2],
+            "translation": "Вы (уваж)",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u6211", "\u4EEC"],
+            "pinyin": "women",
+            "tone": [3, 4],
+            "translation": "Мы",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4F60", "\u4EEC"],
+            "pinyin": "nimen",
+            "tone": [3, 4],
+            "translation": "Вы (множ)",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4ED6", "\u4EEC"],
+            "pinyin": "tamen",
+            "tone": [1, 4],
+            "translation": "Они",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5979", "\u4EEC"],
+            "pinyin": "tamen",
+            "tone": [1, 4],
+            "translation": "Они",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5B83", "\u4EEC"],
+            "pinyin": "tamen",
+            "tone": [1, 4],
+            "translation": "Они",
+            "wordType": "",
+            "description": ""
+        }
+    ],
+    "verbs": [
+        {
+            "hieroglyphCode": ["\u662F"],
+            "pinyin": "shi",
+            "tone": [4],
+            "translation": "Быть, являться",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u6709"],
+            "pinyin": "you",
+            "tone": [3],
+            "translation": "Иметь",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u77E5", "\u9053"],
+            "pinyin": "zhidao",
+            "tone": [1, 4],
+            "translation": "Знать",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u8BF7"],
+            "pinyin": "qing",
+            "tone": [3],
+            "translation": "Просить",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5B66", "\u4E60"],
+            "pinyin": "xuexi",
+            "tone": [2, 2],
+            "translation": "Учиться",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u89C9", "\u5F97"],
+            "pinyin": "juede",
+            "tone": [2, 4],
+            "translation": "Чувствовать",
+            "wordType": "",
+            "description": ""
+        }
+    ],
+    "nouns": [
+        {
+            "hieroglyphCode": ["\u4EBA"],
+            "pinyin": "ren",
+            "tone": [2],
+            "translation": "Человек",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u670B", "\u53CB"],
+            "pinyin": "pengyou",
+            "tone": [2, 4],
+            "translation": "Друг",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4E66"],
+            "pinyin": "shu",
+            "tone": [1],
+            "translation": "Книга",
+            "wordType": "",
+            "description": ""
+        }
+    ],
+    "adjectives": [
+        {
+            "hieroglyphCode": ["\u597D"],
+            "pinyin": "hao",
+            "tone": [3],
+            "translation": "Хорошо",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5C0F"],
+            "pinyin": "xiao",
+            "tone": [3],
+            "translation": "Маленький",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5927"],
+            "pinyin": "da",
+            "tone": [4],
+            "translation": "Большой",
+            "wordType": "",
+            "description": ""
+        }
+    ],
+    "phrases": [
+        {
+            "hieroglyphCode": ["\u4F60", "\u597D"],
+            "pinyin": "nihao",
+            "tone": [3, 3],
+            "translation": "привет",
+            "wordType": "",
+            "description": ""
+        }
+    ],
+    "techWords": [
+        {
+            "hieroglyphCode": ["\u4E0D"],
+            "pinyin": "bu",
+            "tone": [4],
+            "translation": "Частица не",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5417"],
+            "pinyin": "ma",
+            "tone": [4],
+            "translation": "Вопросительная частица",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u7684"],
+            "pinyin": "de",
+            "tone": [4],
+            "translation": "Притяжательная частица",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u8FD9"],
+            "pinyin": "zhe",
+            "tone": [4],
+            "translation": "Это/этот",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u90A3"],
+            "pinyin": "na",
+            "tone": [4],
+            "translation": "То/тот",
+            "wordType": "",
+            "description": ""
+        }
+    ],
+    "numbers" : [
+        {
+            "hieroglyphCode": ["\u4E00"],
+            "pinyin": "yi",
+            "tone": [1],
+            "translation": "Один",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4E8C"],
+            "pinyin": "er",
+            "tone": [4],
+            "translation": "Четыре",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4E09"],
+            "pinyin": "san",
+            "tone": [1],
+            "translation": "Три",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u56DB"],
+            "pinyin": "si",
+            "tone": [4],
+            "translation": "Четыре",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4E94"],
+            "pinyin": "wu",
+            "tone": [3],
+            "translation": "Пять",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u516D"],
+            "pinyin": "liu",
+            "tone": [4],
+            "translation": "Шесть",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4E03"],
+            "pinyin": "qi",
+            "tone": [1],
+            "translation": "Семь",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u516B"],
+            "pinyin": "ba",
+            "tone": [1],
+            "translation": "Восемь",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4E5D"],
+            "pinyin": "jiu",
+            "tone": [3],
+            "translation": "Девять",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u5341"],
+            "pinyin": "shi",
+            "tone": [2],
+            "translation": "Десять",
+            "wordType": "",
+            "description": ""
+        }
+    ],
+    "colors" : [
+        {
+            "hieroglyphCode": ["\u7EA2"],
+            "pinyin": "hong",
+            "tone": [2],
+            "translation": "Красный",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u7EFF"],
+            "pinyin": "lu",
+            "tone": [4],
+            "translation": "Зелёный",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u767D"],
+            "pinyin": "bai",
+            "tone": [2],
+            "translation": "Белый",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["\u4E4C"],
+            "pinyin": "wu",
+            "tone": [1],
+            "translation": "Черный",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["黄"],
+            "pinyin": "huang",
+            "tone": [2],
+            "translation": "Желтый",
+            "wordType": "",
+            "description": ""
+        }
+    ]
+}
