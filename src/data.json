@@ -51,7 +51,7 @@
         {
             "hieroglyphCode": ["我", "们"],
             "pinyin": "wǒmen",
-            "tone": [3, 4],
+            "tone": [3, 0],
             "translation": "Мы",
             "wordType": "",
             "description": ""
@@ -59,7 +59,7 @@
         {
             "hieroglyphCode": ["你", "们"],
             "pinyin": "nǐmen",
-            "tone": [3, 4],
+            "tone": [3, 0],
             "translation": "Вы (множ)",
             "wordType": "",
             "description": ""
@@ -67,7 +67,7 @@
         {
             "hieroglyphCode": ["他", "们"],
             "pinyin": "tāmen",
-            "tone": [1, 4],
+            "tone": [1, 0],
             "translation": "Они",
             "wordType": "",
             "description": ""
@@ -75,7 +75,7 @@
         {
             "hieroglyphCode": ["她", "们"],
             "pinyin": "tāmen",
-            "tone": [1, 4],
+            "tone": [1, 0],
             "translation": "Они",
             "wordType": "",
             "description": ""
@@ -83,7 +83,7 @@
         {
             "hieroglyphCode": ["它", "们"],
             "pinyin": "tāmen",
-            "tone": [1, 4],
+            "tone": [1,0],
             "translation": "Они",
             "wordType": "",
             "description": ""
@@ -151,7 +151,7 @@
         {
             "hieroglyphCode": ["朋", "友"],
             "pinyin": "péngyou",
-            "tone": [2, 4],
+            "tone": [2, 0],
             "translation": "Друг",
             "wordType": "",
             "description": ""
@@ -227,7 +227,7 @@
         {
             "hieroglyphCode": ["请", "问"],
             "pinyin": "qǐngwèn",
-            "tone": [3, 2],
+            "tone": [3, 4],
             "translation": "Позвольте спросить",
             "wordType": "",
             "description": ""
@@ -253,7 +253,7 @@
         {
             "hieroglyphCode": ["的"],
             "pinyin": "de",
-            "tone": [4],
+            "tone": [0],
             "translation": "Притяжательная частица",
             "wordType": "",
             "description": ""
