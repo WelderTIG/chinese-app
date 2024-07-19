@@ -1,88 +1,88 @@
 {
     "pronounces": [
         {
-            "hieroglyphCode": ["\u6211"],
-            "pinyin": "wo",
+            "hieroglyphCode": ["我"],
+            "pinyin": "wǒ",
             "tone": [3],
             "translation": "Я",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4F60"],
-            "pinyin": "ni",
+            "hieroglyphCode": ["你"],
+            "pinyin": "nǐ",
             "tone": [3],
             "translation": "Ты",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4ED6"],
-            "pinyin": "ta",
+            "hieroglyphCode": ["他"],
+            "pinyin": "tā",
             "tone": [1],
             "translation": "Он",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5979"],
-            "pinyin": "ta",
+            "hieroglyphCode": ["她"],
+            "pinyin": "tā",
             "tone": [1],
             "translation": "Она",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5B83"],
-            "pinyin": "ta",
+            "hieroglyphCode": ["它"],
+            "pinyin": "tā",
             "tone": [1],
             "translation": "Оно",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u60A8"],
-            "pinyin": "nin",
+            "hieroglyphCode": ["您"],
+            "pinyin": "nín",
             "tone": [2],
             "translation": "Вы (уваж)",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u6211", "\u4EEC"],
-            "pinyin": "women",
+            "hieroglyphCode": ["我", "们"],
+            "pinyin": "wǒmen",
             "tone": [3, 4],
             "translation": "Мы",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4F60", "\u4EEC"],
-            "pinyin": "nimen",
+            "hieroglyphCode": ["你", "们"],
+            "pinyin": "nǐmen",
             "tone": [3, 4],
             "translation": "Вы (множ)",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4ED6", "\u4EEC"],
-            "pinyin": "tamen",
+            "hieroglyphCode": ["他", "们"],
+            "pinyin": "tāmen",
             "tone": [1, 4],
             "translation": "Они",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5979", "\u4EEC"],
-            "pinyin": "tamen",
+            "hieroglyphCode": ["她", "们"],
+            "pinyin": "tāmen",
             "tone": [1, 4],
             "translation": "Они",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5B83", "\u4EEC"],
-            "pinyin": "tamen",
+            "hieroglyphCode": ["它", "们"],
+            "pinyin": "tāmen",
             "tone": [1, 4],
             "translation": "Они",
             "wordType": "",
@@ -91,49 +91,49 @@
     ],
     "verbs": [
         {
-            "hieroglyphCode": ["\u662F"],
-            "pinyin": "shi",
+            "hieroglyphCode": ["是"],
+            "pinyin": "shì",
             "tone": [4],
             "translation": "Быть, являться",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u6709"],
-            "pinyin": "you",
+            "hieroglyphCode": ["有"],
+            "pinyin": "yǒu",
             "tone": [3],
             "translation": "Иметь",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u77E5", "\u9053"],
-            "pinyin": "zhidao",
-            "tone": [1, 4],
+            "hieroglyphCode": ["知", "道"],
+            "pinyin": "zhīdao",
+            "tone": [1, 0],
             "translation": "Знать",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u8BF7"],
-            "pinyin": "qing",
+            "hieroglyphCode": ["请"],
+            "pinyin": "qǐng",
             "tone": [3],
             "translation": "Просить",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5B66", "\u4E60"],
-            "pinyin": "xuexi",
+            "hieroglyphCode": ["学", "习"],
+            "pinyin": "xuéxí",
             "tone": [2, 2],
             "translation": "Учиться",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u89C9", "\u5F97"],
-            "pinyin": "juede",
-            "tone": [2, 4],
+            "hieroglyphCode": ["觉", "得"],
+            "pinyin": "juéde",
+            "tone": [2, 0],
             "translation": "Чувствовать",
             "wordType": "",
             "description": ""
@@ -141,24 +141,24 @@
     ],
     "nouns": [
         {
-            "hieroglyphCode": ["\u4EBA"],
-            "pinyin": "ren",
+            "hieroglyphCode": ["人"],
+            "pinyin": "rén",
             "tone": [2],
             "translation": "Человек",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u670B", "\u53CB"],
-            "pinyin": "pengyou",
+            "hieroglyphCode": ["朋", "友"],
+            "pinyin": "péngyou",
             "tone": [2, 4],
             "translation": "Друг",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4E66"],
-            "pinyin": "shu",
+            "hieroglyphCode": ["书"],
+            "pinyin": "shū",
             "tone": [1],
             "translation": "Книга",
             "wordType": "",
@@ -167,24 +167,24 @@
     ],
     "adjectives": [
         {
-            "hieroglyphCode": ["\u597D"],
-            "pinyin": "hao",
+            "hieroglyphCode": ["好"],
+            "pinyin": "hǎo",
             "tone": [3],
             "translation": "Хорошо",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5C0F"],
-            "pinyin": "xiao",
+            "hieroglyphCode": ["小"],
+            "pinyin": "xiǎo",
             "tone": [3],
             "translation": "Маленький",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5927"],
-            "pinyin": "da",
+            "hieroglyphCode": ["大"],
+            "pinyin": "dà",
             "tone": [4],
             "translation": "Большой",
             "wordType": "",
@@ -193,33 +193,41 @@
     ],
     "phrases": [
         {
-            "hieroglyphCode": ["\u4F60", "\u597D"],
-            "pinyin": "nihao",
+            "hieroglyphCode": ["你", "好"],
+            "pinyin": "nǐhǎo",
             "tone": [3, 3],
-            "translation": "привет",
+            "translation": "Привет",
+            "wordType": "",
+            "description": ""
+        },
+        {
+            "hieroglyphCode": ["请", "问"],
+            "pinyin": "qǐngwèn",
+            "tone": [3, 2],
+            "translation": "Позвольте спросить",
             "wordType": "",
             "description": ""
         }
     ],
     "techWords": [
         {
-            "hieroglyphCode": ["\u4E0D"],
-            "pinyin": "bu",
+            "hieroglyphCode": ["不"],
+            "pinyin": "bù",
             "tone": [4],
             "translation": "Частица не",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5417"],
+            "hieroglyphCode": ["吗"],
             "pinyin": "ma",
-            "tone": [4],
+            "tone": [0],
             "translation": "Вопросительная частица",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u7684"],
+            "hieroglyphCode": ["的"],
             "pinyin": "de",
             "tone": [4],
             "translation": "Притяжательная частица",
@@ -227,16 +235,16 @@
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u8FD9"],
-            "pinyin": "zhe",
+            "hieroglyphCode": ["这"],
+            "pinyin": "zhè",
             "tone": [4],
             "translation": "Это/этот",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u90A3"],
-            "pinyin": "na",
+            "hieroglyphCode": ["那"],
+            "pinyin": "nà",
             "tone": [4],
             "translation": "То/тот",
             "wordType": "",
@@ -245,80 +253,80 @@
     ],
     "numbers" : [
         {
-            "hieroglyphCode": ["\u4E00"],
-            "pinyin": "yi",
+            "hieroglyphCode": ["一"],
+            "pinyin": "yī",
             "tone": [1],
             "translation": "Один",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4E8C"],
-            "pinyin": "er",
+            "hieroglyphCode": ["二"],
+            "pinyin": "èr",
             "tone": [4],
             "translation": "Четыре",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4E09"],
-            "pinyin": "san",
+            "hieroglyphCode": ["三"],
+            "pinyin": "sān",
             "tone": [1],
             "translation": "Три",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u56DB"],
-            "pinyin": "si",
+            "hieroglyphCode": ["四"],
+            "pinyin": "sì",
             "tone": [4],
             "translation": "Четыре",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4E94"],
-            "pinyin": "wu",
+            "hieroglyphCode": ["五"],
+            "pinyin": "wǔ",
             "tone": [3],
             "translation": "Пять",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u516D"],
-            "pinyin": "liu",
+            "hieroglyphCode": ["六"],
+            "pinyin": "liù",
             "tone": [4],
             "translation": "Шесть",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4E03"],
-            "pinyin": "qi",
+            "hieroglyphCode": ["七"],
+            "pinyin": "qī",
             "tone": [1],
             "translation": "Семь",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u516B"],
-            "pinyin": "ba",
+            "hieroglyphCode": ["八"],
+            "pinyin": "bā",
             "tone": [1],
             "translation": "Восемь",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4E5D"],
-            "pinyin": "jiu",
+            "hieroglyphCode": ["九"],
+            "pinyin": "jiǔ",
             "tone": [3],
             "translation": "Девять",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u5341"],
-            "pinyin": "shi",
+            "hieroglyphCode": ["十"],
+            "pinyin": "shí",
             "tone": [2],
             "translation": "Десять",
             "wordType": "",
@@ -327,32 +335,32 @@
     ],
     "colors" : [
         {
-            "hieroglyphCode": ["\u7EA2"],
-            "pinyin": "hong",
+            "hieroglyphCode": ["红"],
+            "pinyin": "hóng",
             "tone": [2],
             "translation": "Красный",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u7EFF"],
-            "pinyin": "lu",
+            "hieroglyphCode": ["绿"],
+            "pinyin": "lù",
             "tone": [4],
             "translation": "Зелёный",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u767D"],
-            "pinyin": "bai",
+            "hieroglyphCode": ["白"],
+            "pinyin": "bái",
             "tone": [2],
             "translation": "Белый",
             "wordType": "",
             "description": ""
         },
         {
-            "hieroglyphCode": ["\u4E4C"],
-            "pinyin": "wu",
+            "hieroglyphCode": ["乌"],
+            "pinyin": "wū",
             "tone": [1],
             "translation": "Черный",
             "wordType": "",
@@ -360,7 +368,7 @@
         },
         {
             "hieroglyphCode": ["黄"],
-            "pinyin": "huang",
+            "pinyin": "huáng",
             "tone": [2],
             "translation": "Желтый",
             "wordType": "",
