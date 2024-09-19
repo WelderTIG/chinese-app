@@ -6,22 +6,22 @@ export function randomIntFromInterval(min: number, max: number) {
 
 export const getColor = (color: Tone) => {
     switch (color) {
-      case 1:
-        return "red"
-      case 2:
-        return "blue"
-      case 3:
-        return "orange"
-      case 4:
-        return "green"
-      default:
-        return "black"
+        case 1:
+            return "red"
+        case 2:
+            return "blue"
+        case 3:
+            return "orange"
+        case 4:
+            return "green"
+        default:
+            return "black"
     }
 }
 
 export const getDictionary = (isPublic: boolean) => {
     //TODO get words from DB
-    if(isPublic) {
+    if (isPublic) {
         return publicDict;
     } else {
         return dict;
@@ -30,7 +30,7 @@ export const getDictionary = (isPublic: boolean) => {
 
 export const getWords = (isPublic: boolean) => {
     //TODO get words from DB
-    if(isPublic) {
+    if (isPublic) {
         return publicWords;
     } else {
         return words;
@@ -52,12 +52,12 @@ export const getPart = (word: IWord, isColored: boolean) => {
 
 export const getNumber = (isColored: boolean, dict: IDict) => {
     const rndInt = randomIntFromInterval(1, 99);
-    const units = rndInt%10;
-    const tens = Math.floor(rndInt/10);
+    const units = rndInt % 10;
+    const tens = Math.floor(rndInt / 10);
 
     if (units !== 0 && tens === 0) {
         return [
-            ...getPart(dict.numbers[units-1], isColored),
+            ...getPart(dict.numbers[units - 1], isColored),
         ]
     }
     if (units === 0 && tens === 1) {
@@ -65,35 +65,35 @@ export const getNumber = (isColored: boolean, dict: IDict) => {
     }
     if (units === 0 && tens > 1) {
         return [
-            ...getPart(dict.numbers[tens-1], isColored),
+            ...getPart(dict.numbers[tens - 1], isColored),
             ...getPart(dict.numbers[9], isColored),
         ]
     }
     if (units !== 0 && tens === 1) {
         return [
             ...getPart(dict.numbers[9], isColored),
-            ...getPart(dict.numbers[units-1], isColored),
+            ...getPart(dict.numbers[units - 1], isColored),
         ]
     }
     if (units !== 0 && tens > 1) {
         return [
-            ...getPart(dict.numbers[tens-1], isColored),
+            ...getPart(dict.numbers[tens - 1], isColored),
             ...getPart(dict.numbers[9], isColored),
-            ...getPart(dict.numbers[units-1], isColored),
+            ...getPart(dict.numbers[units - 1], isColored),
         ]
     }
-    
+
     return [...getPart(dict.numbers[0], isColored)]
 }
 
 export const genZheShiNoun = (isColored: boolean, dict: IDict) => {
-    const pr1 = randomIntFromInterval(1, 99)%10%2 ? dict.techWords[4] : dict.techWords[3];
+    const pr1 = randomIntFromInterval(1, 99) % 10 % 2 ? dict.techWords[4] : dict.techWords[3];
     const pr2 = dict.pronounces[randomIntFromInterval(1, dict.pronounces.length) - 1];
     const n2 = dict.nouns[randomIntFromInterval(1, dict.nouns.length) - 1];
     const adj1 = dict.adjectives[randomIntFromInterval(1, dict.adjectives.length) - 1];
     const adj2 = dict.colors[randomIntFromInterval(1, dict.colors.length) - 1];
 
-    if (randomIntFromInterval(1, 99)%10%2) {
+    if (randomIntFromInterval(1, 99) % 10 % 2) {
         return {
             sentence: [
                 ...getPart(pr1, isColored),
@@ -145,7 +145,7 @@ export const genGeneralQuestion = (isColored: boolean, dict: IDict) => {
     const n = dict.nouns[randomIntFromInterval(1, dict.nouns.length) - 1];
     const v = dict.verbs[randomIntFromInterval(1, dict.verbs.length) - 1];
 
-    if(randomIntFromInterval(1, 99)%10%2) {
+    if (randomIntFromInterval(1, 99) % 10 % 2) {
         return {
             sentence: [
                 ...getPart(pr1, isColored),
@@ -197,8 +197,9 @@ export const genPronounces = (isColored: boolean, dict: IDict) => {
     const pr1 = dict.pronounces[randomIntFromInterval(1, dict.pronounces.length) - 1];
     const pr2 = dict.pronounces[randomIntFromInterval(1, dict.pronounces.length) - 1];
     const v = dict.verbs[randomIntFromInterval(1, dict.verbs.length) - 1];
+    const lastName = dict.lastName[randomIntFromInterval(1, dict.lastName.length) - 1];
 
-    if(randomIntFromInterval(1, 99)%10%2) {
+    if (randomIntFromInterval(1, 99) % 10 % 2) {
         return {
             sentence: [
                 ...getPart(pr1, isColored),
@@ -208,6 +209,7 @@ export const genPronounces = (isColored: boolean, dict: IDict) => {
                 ...getPart(dict.techWords[2], isColored),
                 ...getPart(dict.adjectives[0], isColored),
                 ...getPart(dict.nouns[1], isColored),
+                ...getPart(lastName, isColored),
             ],
             words: [
                 pr1,
@@ -217,6 +219,7 @@ export const genPronounces = (isColored: boolean, dict: IDict) => {
                 dict.techWords[2],
                 dict.adjectives[0],
                 dict.nouns[1],
+                lastName
             ]
         }
     } else {
@@ -228,6 +231,7 @@ export const genPronounces = (isColored: boolean, dict: IDict) => {
                 ...getPart(dict.techWords[2], isColored),
                 ...getPart(dict.adjectives[0], isColored),
                 ...getPart(dict.nouns[1], isColored),
+                ...getPart(lastName, isColored),
             ],
             words: [
                 pr1,
@@ -236,6 +240,7 @@ export const genPronounces = (isColored: boolean, dict: IDict) => {
                 dict.techWords[2],
                 dict.adjectives[0],
                 dict.nouns[1],
+                lastName
             ]
         }
     }

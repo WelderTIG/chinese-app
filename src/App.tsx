@@ -6,10 +6,10 @@ import { getExample, getWords } from './generator';
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
-    const [isColored, setIsColored] = useState(true)
-    const [isPublic, setIsPublic] = useState(true)
+    const [isColored, setIsColored] = useState(false)
+    const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
-    
+
     const onOptionChange = (e: any) => {
         setExampleType(e.target.value)
     }
@@ -51,38 +51,38 @@ function App() {
     const handleIsDictVisibleChange = () => {
         setIsDictVisible(!isDictVisible)
     }
-    
+
     return (
         <>
             <div style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignContent: 'center',
+                alignItems: 'center'
+            }}>
+                <div style={{
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
                     alignContent: 'center',
-                    alignItems: 'center'
+                    width: 300,
+                    height: 300
                 }}>
-                <div style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignContent: 'center',
-                        width: 300,
-                        height: 300
-                    }}>
                     <div style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "center",
-                            marginBottom: 50
-                        }}>
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        marginBottom: 50
+                    }}>
                         {phrase}
                     </div>
 
                     <div style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "center"
-                        }}>
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center"
+                    }}>
                         <p>Color</p>
                         <input type="checkbox" checked={isColored} onChange={handleIsColoredChange} />
                         <button
@@ -97,12 +97,12 @@ function App() {
                     </div>
 
                     <div style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "center",
-                            alignContent: 'center',
-                            marginTop: 15
-                        }}>
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignContent: 'center',
+                        marginTop: 15
+                    }}>
                         <input
                             type="radio"
                             name="exampleType"
@@ -146,12 +146,12 @@ function App() {
 
                     {isPublic && (
                         <div style={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "center",
-                                alignContent: 'center',
-                                marginTop: 15
-                            }}>
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            alignContent: 'center',
+                            marginTop: 15
+                        }}>
                             <input
                                 type="radio"
                                 name="exampleType"
@@ -183,13 +183,13 @@ function App() {
                             <label htmlFor="phrases">Phrases</label>
 
                             <input
-                                    type="radio"
-                                    name="exampleType"
-                                    value="PPF"
-                                    id="ppf"
-                                    checked={exampleType === "PPF"}
-                                    onChange={onOptionChange}
-                                />
+                                type="radio"
+                                name="exampleType"
+                                value="PPF"
+                                id="ppf"
+                                checked={exampleType === "PPF"}
+                                onChange={onOptionChange}
+                            />
                             <label htmlFor="ppf">PPF</label>
 
                             <input
@@ -212,7 +212,7 @@ function App() {
                             border={1}
                             bgcolor="#d6d5f5"
                             width={350}
-                            >
+                        >
                             <caption>Используемые слова</caption>
                             <tr>
                                 <td>Иероглиф</td>
@@ -227,7 +227,7 @@ function App() {
                             border={1}
                             bgcolor="#edddaf"
                             width={350}
-                            >
+                        >
                             <caption>Весь словарь</caption>
                             <tr>
                                 <td>Иероглиф</td>
@@ -240,10 +240,10 @@ function App() {
 
 
                         <div style={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "center"
-                            }}>
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "center"
+                        }}>
                             <p>Dictionary</p>
                             <input type="checkbox" checked={isPublic} onChange={handleIsPublicChange} />
                         </div>

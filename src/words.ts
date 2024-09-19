@@ -32,6 +32,7 @@ export interface IDict {
     techWords: IWord[];
     numbers: IWord[];
     colors: IWord[];
+    lastName: IWord[];
 }
 
 export const dict = {
@@ -43,6 +44,7 @@ export const dict = {
     techWords: data.techWords,
     numbers: data.numbers,
     colors: data.colors,
+    lastName: data.lastName,
 }
 
 export const publicDict = {
@@ -54,6 +56,7 @@ export const publicDict = {
     techWords: publicData.techWords,
     numbers: publicData.numbers,
     colors: publicData.colors,
+    lastName: data.lastName,
 }
 
 export const words: IWord[] = [
@@ -65,6 +68,7 @@ export const words: IWord[] = [
     ...data.techWords,
     ...data.colors,
     ...data.pronounces,
+    ...data.lastName,
 ]
 
 export const publicWords: IWord[] = [
