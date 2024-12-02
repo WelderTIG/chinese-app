@@ -8,7 +8,7 @@ import { getMessaging, getToken } from 'firebase/messaging';
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
-    const [isColored, setIsColored] = useState(false)
+    const [isColored, setIsColored] = useState(true)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
 
@@ -32,15 +32,22 @@ function App() {
     useEffect(() => {
         console.log('==== 1 ====', 1);
 
-        const fetchData = async () => {
-            await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js', { scope: "/" });
-            const appFirebase = initializeApp(FirebaseConfig);
-            const messagingFirebase = getMessaging(appFirebase);
-            const currentToken = await getToken(messagingFirebase, { vapidKey: vKey.vapidKeyFCM });
-            console.log("🚀 ~ App ~ currentToken:", currentToken)
-        }
+        if ('serviceWorker' in navigator) {
 
-        fetchData()
+            const fetchData = async () => {
+                console.log('==== 2 ====', 2);
+                await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js', { scope: "/chinese-app/" });
+                console.log('==== 3 ====', 3);
+                const appFirebase = initializeApp(FirebaseConfig);
+                console.log('==== 4 ====', 4);
+                const messagingFirebase = getMessaging(appFirebase);
+                console.log('==== 5 ====', 5);
+                const currentToken = await getToken(messagingFirebase, { vapidKey: vKey.vapidKeyFCM });
+                console.log("🚀 ~ App ~ currentToken:", currentToken)
+            }
+
+            fetchData()
+        }
     }, [])
 
     const onOptionChange = (e: any) => {
