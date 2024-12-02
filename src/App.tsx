@@ -8,7 +8,7 @@ import { getMessaging, getToken } from 'firebase/messaging';
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
-    const [isColored, setIsColored] = useState(false)
+    const [isColored, setIsColored] = useState(true)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
 
@@ -36,7 +36,7 @@ function App() {
 
             const fetchData = async () => {
                 console.log('==== 2 ====', 2);
-                await navigator.serviceWorker.register('/firebase-messaging-sw.js', { scope: "/chinese-app/" });
+                await navigator.serviceWorker.register('./firebase-messaging-sw.js');
                 console.log('==== 3 ====', 3);
                 const appFirebase = initializeApp(FirebaseConfig);
                 console.log('==== 4 ====', 4);
