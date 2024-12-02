@@ -36,7 +36,7 @@ function App() {
 
             const fetchData = async () => {
                 console.log('==== 2 ====', 2);
-                await navigator.serviceWorker.register('./firebase-messaging-sw.js');
+                await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
                 console.log('==== 3 ====', 3);
                 const appFirebase = initializeApp(FirebaseConfig);
                 console.log('==== 4 ====', 4);
