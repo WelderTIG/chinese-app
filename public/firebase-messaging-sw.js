@@ -27,17 +27,17 @@ importScripts('https://www.gstatic.com/firebasejs/11.0.2/firebase-messaging.js')
 //   );
 // })
 
-// firebase.initializeApp({
-//   apiKey: "AIzaSyAdXIm_mAmUiR0m1ahG5w7mtTOEGpcZlgY",
-//   authDomain: "testproj-b2617.firebaseapp.com",
-//   databaseURL: "https://testproj-b2617-default-rtdb.europe-west1.firebasedatabase.app",
-//   projectId: "testproj-b2617",
-//   storageBucket: "testproj-b2617.firebasestorage.app",
-//   messagingSenderId: "790248812944",
-//   appId: "1:790248812944:web:e4321d7bee54f59e76c315",
-//   measurementId: "G-2TBCVYX081"
-// });
+firebase.initializeApp({
+  apiKey: "AIzaSyAdXIm_mAmUiR0m1ahG5w7mtTOEGpcZlgY",
+  authDomain: "testproj-b2617.firebaseapp.com",
+  databaseURL: "https://testproj-b2617-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "testproj-b2617",
+  storageBucket: "testproj-b2617.firebasestorage.app",
+  messagingSenderId: "790248812944",
+  appId: "1:790248812944:web:e4321d7bee54f59e76c315",
+  measurementId: "G-2TBCVYX081"
+});
 
 // Retrieve an instance of Firebase Messaging so that it can handle background messages.
-// const messaging = firebase.messaging();
+const messaging = firebase.messaging();
 // [END initialize_firebase_in_sw]
