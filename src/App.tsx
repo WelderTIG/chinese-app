@@ -11,7 +11,7 @@ function App() {
     const [isColored, setIsColored] = useState(true)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
-    const [deviceToken, setDeviceToken] = useState("Ошибка библиотеки")
+    const [deviceToken, setDeviceToken] = useState("")
 
 
     const FirebaseConfig = {
