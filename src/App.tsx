@@ -8,7 +8,7 @@ import { getMessaging, getToken } from 'firebase/messaging';
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
-    const [isColored, setIsColored] = useState(true)
+    const [isColored, setIsColored] = useState(false)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
     const [deviceToken, setDeviceToken] = useState("")
@@ -29,35 +29,58 @@ function App() {
     }
 
 
+    console.log('==== 1 ====', 1);
+    const requestNotificationPermission = async () => {
+        if ('Notification' in window) {
+            const permission = await Notification.requestPermission();
+        }
+    }
+
+    const fetchData = async () => {
+        await Notification.requestPermission();
+        console.log('==== 2 ====', 2);
+        await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
+        console.log('==== 3 ====', 3);
+        const appFirebase = initializeApp(FirebaseConfig);
+        console.log('==== 4 ====', 4);
+        const messagingFirebase = getMessaging(appFirebase);
+        console.log('==== 5 ====', 5);
+        const currentToken = await getToken(messagingFirebase, {
+            vapidKey: vKey.vapidKeyFCM,
+            serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
+        });
+        console.log("🚀 ~ App ~ currentToken:", currentToken)
+        setDeviceToken(currentToken ? currentToken : "Ошибка библиотеки")
+    }
 
     useEffect(() => {
 
-        console.log('==== 1 ====', 1);
-        const requestNotificationPermission = async () => {
-            if ('Notification' in window) {
-                const permission = await Notification.requestPermission();
-            }
-        }
+        // console.log('==== 1 ====', 1);
+        // const requestNotificationPermission = async () => {
+        //     if ('Notification' in window) {
+        //         const permission = await Notification.requestPermission();
+        //     }
+        // }
 
-        const fetchData = async () => {
-            await Notification.requestPermission();
-            console.log('==== 2 ====', 2);
-            await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
-            console.log('==== 3 ====', 3);
-            const appFirebase = initializeApp(FirebaseConfig);
-            console.log('==== 4 ====', 4);
-            const messagingFirebase = getMessaging(appFirebase);
-            console.log('==== 5 ====', 5);
-            const currentToken = await getToken(messagingFirebase, {
-                vapidKey: vKey.vapidKeyFCM,
-                serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
-            });
-            console.log("🚀 ~ App ~ currentToken:", currentToken)
-            setDeviceToken(currentToken ? currentToken : "Ошибка библиотеки")
-        }
+        // const fetchData = async () => {
+        //     await Notification.requestPermission();
+        //     console.log('==== 2 ====', 2);
+        //     await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
+        //     console.log('==== 3 ====', 3);
+        //     const appFirebase = initializeApp(FirebaseConfig);
+        //     console.log('==== 4 ====', 4);
+        //     const messagingFirebase = getMessaging(appFirebase);
+        //     console.log('==== 5 ====', 5);
+        //     const currentToken = await getToken(messagingFirebase, {
+        //         vapidKey: vKey.vapidKeyFCM,
+        //         serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
+        //     });
+        //     console.log("🚀 ~ App ~ currentToken:", currentToken)
+        //     setDeviceToken(currentToken ? currentToken : "Ошибка библиотеки")
+        // }
 
-        requestNotificationPermission();
-        fetchData();
+        // requestNotificationPermission();
+        // fetchData();
 
     })
 
@@ -90,6 +113,8 @@ function App() {
     });
 
     const generate = () => {
+        requestNotificationPermission();
+        fetchData();
         ex = getExample(exampleType, isColored, isPublic);
         setTumbler(!tumbler)
     }
