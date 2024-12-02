@@ -30,6 +30,7 @@ function App() {
 
 
     useEffect(() => {
+        console.log('==== 1 ====', 1);
 
         const fetchData = async () => {
             await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js', { scope: "/" });
