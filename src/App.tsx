@@ -138,7 +138,6 @@ function App() {
                         display: "flex",
                         flexDirection: "row",
                         justifyContent: "center",
-                        marginBottom: 50,
                         marginTop: 50
                     }}>
                         {step}
