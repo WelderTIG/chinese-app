@@ -34,9 +34,9 @@ function App() {
 
         console.log('==== 1 ====', 1);
         const requestNotificationPermission = async () => {
-            if ('Notification' in window) {
-                const permission = await Notification.requestPermission();
-            }
+            // if ('Notification' in window) {
+            const permission = await Notification.requestPermission();
+            // }
         }
 
         const fetchData = async () => {
