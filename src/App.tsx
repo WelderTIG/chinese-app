@@ -12,6 +12,7 @@ function App() {
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
     const [deviceToken, setDeviceToken] = useState("")
+    const [step, setStep] = useState(0)
 
 
     const FirebaseConfig = {
@@ -31,17 +32,18 @@ function App() {
 
     const fetchData = async () => {
         await Notification.requestPermission();
-        console.log('==== 2 ====', 2);
+        setStep(2)
         await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
-        console.log('==== 3 ====', 3);
+        setStep(3)
         const appFirebase = initializeApp(FirebaseConfig);
-        console.log('==== 4 ====', 4);
+        setStep(4)
         const messagingFirebase = getMessaging(appFirebase);
-        console.log('==== 5 ====', 5);
+        setStep(5)
         const currentToken = await getToken(messagingFirebase, {
             vapidKey: vKey.vapidKeyFCM,
             serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
         });
+        setStep(6)
         console.log("🚀 ~ App ~ currentToken:", currentToken)
         setDeviceToken(currentToken ? currentToken : "Ошибка библиотеки")
     }
@@ -132,6 +134,15 @@ function App() {
                     width: 300,
                     height: 300
                 }}>
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        marginBottom: 50,
+                        marginTop: 50
+                    }}>
+                        {step}
+                    </div>
                     <div style={{
                         display: "flex",
                         flexDirection: "row",
