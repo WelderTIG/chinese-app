@@ -8,7 +8,7 @@ import { getMessaging, getToken } from 'firebase/messaging';
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
-    const [isColored, setIsColored] = useState(false)
+    const [isColored, setIsColored] = useState(true)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
     const [deviceToken, setDeviceToken] = useState("Ошибка библиотеки")
@@ -33,47 +33,32 @@ function App() {
     useEffect(() => {
 
         console.log('==== 1 ====', 1);
-        async function requestNotificationPermission() {
-            try {
-                if ('Notification' in window) {
-                    const permission = await Notification.requestPermission();
-                    if (permission === 'granted') {
-                        // Разрешение получено, можно отправлять уведомления
-                        console.log('Разрешение получено');
-                    } else {
-                        // Разрешение не получено
-                        console.log('Разрешение не получено');
-                    }
-                } else {
-                    // Уведомления не поддерживаются
-                    console.log('Уведомления не поддерживаются');
-                }
-            } catch (err) {
-                console.warn(err);
+        const requestNotificationPermission = async () => {
+            if ('Notification' in window) {
+                const permission = await Notification.requestPermission();
             }
-
-
-            requestNotificationPermission();
-
-            const fetchData = async () => {
-                await Notification.requestPermission();
-                console.log('==== 2 ====', 2);
-                await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
-                console.log('==== 3 ====', 3);
-                const appFirebase = initializeApp(FirebaseConfig);
-                console.log('==== 4 ====', 4);
-                const messagingFirebase = getMessaging(appFirebase);
-                console.log('==== 5 ====', 5);
-                const currentToken = await getToken(messagingFirebase, {
-                    vapidKey: vKey.vapidKeyFCM,
-                    serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
-                });
-                console.log("🚀 ~ App ~ currentToken:", currentToken)
-                setDeviceToken(currentToken ? currentToken : "Ошибка библиотеки")
-            }
-
-            fetchData()
         }
+
+        const fetchData = async () => {
+            await Notification.requestPermission();
+            console.log('==== 2 ====', 2);
+            await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
+            console.log('==== 3 ====', 3);
+            const appFirebase = initializeApp(FirebaseConfig);
+            console.log('==== 4 ====', 4);
+            const messagingFirebase = getMessaging(appFirebase);
+            console.log('==== 5 ====', 5);
+            const currentToken = await getToken(messagingFirebase, {
+                vapidKey: vKey.vapidKeyFCM,
+                serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
+            });
+            console.log("🚀 ~ App ~ currentToken:", currentToken)
+            setDeviceToken(currentToken ? currentToken : "Ошибка библиотеки")
+        }
+
+        requestNotificationPermission();
+        fetchData();
+
     }, [])
 
     const onOptionChange = (e: any) => {
