@@ -1,7 +1,9 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { getExample, getWords } from './generator';
+import { initializeApp } from 'firebase/app';
+import { getMessaging, getToken } from 'firebase/messaging';
 
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
@@ -9,6 +11,36 @@ function App() {
     const [isColored, setIsColored] = useState(false)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
+
+
+    const FirebaseConfig = {
+        apiKey: "AIzaSyAdXIm_mAmUiR0m1ahG5w7mtTOEGpcZlgY",
+        authDomain: "testproj-b2617.firebaseapp.com",
+        databaseURL: "https://testproj-b2617-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "testproj-b2617",
+        storageBucket: "testproj-b2617.firebasestorage.app",
+        messagingSenderId: "790248812944",
+        appId: "1:790248812944:web:e4321d7bee54f59e76c315",
+        measurementId: "G-2TBCVYX081"
+    };
+    const vKey = {
+        vapidKeyFCM: 'BD_iZ3yFiON_An7KYlBc7CwT32EKUCeMOH9b4NrXxB6F8yIqwlBWkf3C_qKMQre7WZXkUvW9bBpd3CTLCMeuOCA'
+    }
+
+
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+            await navigator.serviceWorker.register('/firebase-messaging-sw.js', { scope: "/" });
+            const appFirebase = initializeApp(FirebaseConfig);
+            const messagingFirebase = getMessaging(appFirebase);
+            const currentToken = await getToken(messagingFirebase, { vapidKey: vKey.vapidKeyFCM });
+            console.log("🚀 ~ App ~ currentToken:", currentToken)
+        }
+
+        fetchData()
+    })
 
     const onOptionChange = (e: any) => {
         setExampleType(e.target.value)
