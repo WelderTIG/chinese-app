@@ -59,7 +59,7 @@ function App() {
         requestNotificationPermission();
         fetchData();
 
-    }, [])
+    })
 
     const onOptionChange = (e: any) => {
         setExampleType(e.target.value)
