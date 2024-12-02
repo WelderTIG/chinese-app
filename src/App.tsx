@@ -32,7 +32,7 @@ function App() {
     useEffect(() => {
 
         const fetchData = async () => {
-            await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
+            await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js', { scope: "/chinese-app/" });
             const appFirebase = initializeApp(FirebaseConfig);
             const messagingFirebase = getMessaging(appFirebase);
             const currentToken = await getToken(messagingFirebase, { vapidKey: vKey.vapidKeyFCM });
