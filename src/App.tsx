@@ -11,6 +11,7 @@ function App() {
     const [isColored, setIsColored] = useState(false)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
+    const [deviceToken, setDeviceToken] = useState("Ошибка библиотеки")
 
 
     const FirebaseConfig = {
@@ -47,6 +48,7 @@ function App() {
                     serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
                 });
                 console.log("🚀 ~ App ~ currentToken:", currentToken)
+                setDeviceToken(currentToken ? currentToken : "Ошибка библиотеки")
             }
 
             fetchData()
@@ -112,6 +114,15 @@ function App() {
                     width: 300,
                     height: 300
                 }}>
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        marginBottom: 50,
+                        marginTop: 50
+                    }}>
+                        {deviceToken}
+                    </div>
                     <div style={{
                         display: "flex",
                         flexDirection: "row",
