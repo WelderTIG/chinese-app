@@ -31,11 +31,32 @@ function App() {
 
 
     useEffect(() => {
-        console.log('==== 1 ====', 1);
 
-        if ('serviceWorker' in navigator) {
+        console.log('==== 1 ====', 1);
+        async function requestNotificationPermission() {
+            try {
+                if ('Notification' in window) {
+                    const permission = await Notification.requestPermission();
+                    if (permission === 'granted') {
+                        // Разрешение получено, можно отправлять уведомления
+                        console.log('Разрешение получено');
+                    } else {
+                        // Разрешение не получено
+                        console.log('Разрешение не получено');
+                    }
+                } else {
+                    // Уведомления не поддерживаются
+                    console.log('Уведомления не поддерживаются');
+                }
+            } catch (err) {
+                console.warn(err);
+            }
+
+
+            requestNotificationPermission();
 
             const fetchData = async () => {
+                await Notification.requestPermission();
                 console.log('==== 2 ====', 2);
                 await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
                 console.log('==== 3 ====', 3);
