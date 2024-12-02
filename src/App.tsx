@@ -8,7 +8,7 @@ import { getMessaging, getToken } from 'firebase/messaging';
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
-    const [isColored, setIsColored] = useState(false)
+    const [isColored, setIsColored] = useState(true)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
     const [deviceToken, setDeviceToken] = useState("")
@@ -28,13 +28,6 @@ function App() {
         vapidKeyFCM: 'BD_iZ3yFiON_An7KYlBc7CwT32EKUCeMOH9b4NrXxB6F8yIqwlBWkf3C_qKMQre7WZXkUvW9bBpd3CTLCMeuOCA'
     }
 
-
-    console.log('==== 1 ====', 1);
-    const requestNotificationPermission = async () => {
-        if ('Notification' in window) {
-            const permission = await Notification.requestPermission();
-        }
-    }
 
     const fetchData = async () => {
         await Notification.requestPermission();
@@ -56,11 +49,6 @@ function App() {
     useEffect(() => {
 
         // console.log('==== 1 ====', 1);
-        // const requestNotificationPermission = async () => {
-        //     if ('Notification' in window) {
-        //         const permission = await Notification.requestPermission();
-        //     }
-        // }
 
         // const fetchData = async () => {
         //     await Notification.requestPermission();
@@ -82,7 +70,7 @@ function App() {
         // requestNotificationPermission();
         // fetchData();
 
-    })
+    }, [])
 
     const onOptionChange = (e: any) => {
         setExampleType(e.target.value)
@@ -113,7 +101,6 @@ function App() {
     });
 
     const generate = () => {
-        requestNotificationPermission();
         fetchData();
         ex = getExample(exampleType, isColored, isPublic);
         setTumbler(!tumbler)
