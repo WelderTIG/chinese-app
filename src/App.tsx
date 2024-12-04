@@ -147,8 +147,7 @@ function App() {
                         display: "flex",
                         flexDirection: "row",
                         justifyContent: "center",
-                        marginBottom: 50,
-                        marginTop: 50,
+                        margin: 50,
                         wordWrap: 'break-word',
                         overflowWrap: 'break-word'
                     }}>
