@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { getExample, getWords } from './generator';
-import { initializeApp } from 'firebase/app';
-import { getMessaging, getToken } from 'firebase/messaging';
+import firebase from 'firebase';
+import 'firebase/messaging';
 
 
 function App() {
@@ -36,11 +36,11 @@ function App() {
         setStep(2)
         await navigator.serviceWorker.register('/chinese-app/firebase-messaging-sw.js');
         setStep(3)
-        const appFirebase = initializeApp(FirebaseConfig);
+        const appFirebase = firebase.initializeApp(FirebaseConfig);
         setStep(4)
-        const messagingFirebase = getMessaging(appFirebase);
+        const messagingFirebase = firebase.messaging(appFirebase);
         setStep(5)
-        const currentToken = await getToken(messagingFirebase, {
+        const currentToken = await messagingFirebase.getToken({
             vapidKey: vKey.vapidKeyFCM,
             serviceWorkerRegistration: await navigator.serviceWorker.getRegistration('/chinese-app/firebase-messaging-sw.js')
         });
