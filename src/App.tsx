@@ -148,7 +148,9 @@ function App() {
                         flexDirection: "row",
                         justifyContent: "center",
                         marginBottom: 50,
-                        marginTop: 50
+                        marginTop: 50,
+                        wordWrap: 'break-word',
+                        overflowWrap: 'break-word'
                     }}>
                         {deviceToken}
                     </div>
