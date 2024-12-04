@@ -9,7 +9,7 @@ import 'firebase/messaging';
 function App() {
     const [exampleType, setExampleType] = useState("Pronouns")
     const [tumbler, setTumbler] = useState(false)
-    const [isColored, setIsColored] = useState(false)
+    const [isColored, setIsColored] = useState(true)
     const [isPublic, setIsPublic] = useState(false)
     const [isDictVisible, setIsDictVisible] = useState(false)
     const [deviceToken, setDeviceToken] = useState("")
@@ -149,8 +149,7 @@ function App() {
                         justifyContent: "center",
                         marginBottom: 50,
                         marginTop: 50,
-                        marginLeft: 100,
-                        marginRight: 100,
+                        fontSize: 4,
                         wordWrap: 'break-word',
                         overflowWrap: 'break-word'
                     }}>
