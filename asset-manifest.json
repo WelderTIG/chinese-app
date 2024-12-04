@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/chinese-app/static/css/main.f855e6bc.css",
-    "main.js": "/chinese-app/static/js/main.b12bf004.js",
+    "main.js": "/chinese-app/static/js/main.0facf05a.js",
     "static/js/453.2a430903.chunk.js": "/chinese-app/static/js/453.2a430903.chunk.js",
     "index.html": "/chinese-app/index.html",
     "main.f855e6bc.css.map": "/chinese-app/static/css/main.f855e6bc.css.map",
-    "main.b12bf004.js.map": "/chinese-app/static/js/main.b12bf004.js.map",
+    "main.0facf05a.js.map": "/chinese-app/static/js/main.0facf05a.js.map",
     "453.2a430903.chunk.js.map": "/chinese-app/static/js/453.2a430903.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.b12bf004.js"
+    "static/js/main.0facf05a.js"
   ]
 }
