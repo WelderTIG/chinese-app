@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkchinese_app=self.webpackChunkchinese_app||[]).push([[956],{956:(e,a,p)=>{e.exports=p.p+"static/media/grammar.86a5ada0895a2b3edfef.md"}}]);
