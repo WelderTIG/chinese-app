@@ -55,3 +55,29 @@
     padding-left: 1rem;
     border-left: 2px solid #cbd5e0;
 }
+
+@media (max-width: 768px) {
+    .flash-card {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1.5rem;
+        min-height: 200px;
+    }
+
+    .flash-card .glyph {
+        font-size: 2.5rem;
+    }
+
+    .flash-card .pinyin {
+        font-size: 1.25rem;
+        margin: 0.75rem 0;
+    }
+
+    .flash-card .translation {
+        font-size: 1.1rem;
+    }
+
+    .flash-card .examples {
+        margin-top: 1rem;
+    }
+}

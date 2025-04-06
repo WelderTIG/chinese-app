@@ -49,3 +49,28 @@
 .dictionary-table tr:hover {
     background-color: #ebf8ff;
 }
+
+@media (max-width: 768px) {
+    .dictionary-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+
+    .dictionary-table table {
+        width: auto;
+        min-width: 100%;
+    }
+
+    .dictionary-table th,
+    .dictionary-table td {
+        white-space: nowrap;
+    }
+
+    /* Примеры теперь не будут переноситься */
+    .dictionary-table ul {
+        white-space: nowrap;
+        padding-left: 1rem;
+    }
+}

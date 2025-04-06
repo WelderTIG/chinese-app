@@ -1,6 +1,9 @@
+/* responsive.css - замените содержимое */
+
 @media (max-width: 768px) {
     .app {
         padding: 1rem;
+        overflow-x: hidden;
     }
 
     .card-wrapper {
@@ -9,16 +12,22 @@
 
     .grammar-files {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
-    .dictionary-table th,
-    .dictionary-table td {
-        padding: 0.75rem;
+    .grammar-files button {
+        width: 100%;
     }
 
-    .flash-card {
-        min-height: 250px;
-        padding: 1.5rem;
+    /* Улучшение для таблицы */
+    .dictionary-table-container {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+    }
+
+    /* Улучшение для карточек */
+    .flash-card-container {
+        padding: 0 1rem;
     }
 }

@@ -58,12 +58,14 @@ const MemorizationSection: React.FC = () => {
                     Перевод
                 </label>
             </div>
-            <FlashCard
-                word={currentWord}
-                displayMode={displayMode}
-                showAll={showAll}
-                onClick={handleCardClick}
-            />
+            <div className="flash-card-container">
+                <FlashCard
+                    word={currentWord}
+                    displayMode={displayMode}
+                    showAll={showAll}
+                    onClick={handleCardClick}
+                />
+            </div>
         </div>
     );
 };
