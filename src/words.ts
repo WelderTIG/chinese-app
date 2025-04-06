@@ -1,3 +1,5 @@
+import { DictItem } from "./types/types";
+
 const pronouns: { [key: number]: DictItem } = {
     1: {
         glyph: '我',
@@ -100,7 +102,7 @@ const pronouns: { [key: number]: DictItem } = {
         ]
     }
 };
-const verbsBasic: { [key: number]: DictItem & { examples: string[] } } = {
+const verbsBasic: { [key: number]: DictItem } = {
     1: {
         glyph: '是',
         pinyin: 'shì',
@@ -212,7 +214,7 @@ const verbsBasic: { [key: number]: DictItem & { examples: string[] } } = {
         ]
     }
 };
-const verbsAction: { [key: number]: DictItem & { examples: string[] } } = {
+const verbsAction: { [key: number]: DictItem } = {
     1: {
         glyph: '去',
         pinyin: 'qù',
@@ -434,7 +436,7 @@ const verbsAction: { [key: number]: DictItem & { examples: string[] } } = {
         ]
     }
 };
-const questionWords: { [key: number]: DictItem & { examples: string[] } } = {
+const questionWords: { [key: number]: DictItem } = {
     1: {
         glyph: '谁',
         pinyin: 'shéi',
@@ -546,7 +548,7 @@ const questionWords: { [key: number]: DictItem & { examples: string[] } } = {
         ]
     }
 };
-const adverbs: { [key: number]: DictItem & { examples: string[] } } = {
+const adverbs: { [key: number]: DictItem } = {
     1: {
         glyph: '是',
         pinyin: 'shì',
@@ -838,7 +840,7 @@ const adverbs: { [key: number]: DictItem & { examples: string[] } } = {
         ]
     }
 };
-const phrases: { [key: number]: DictItem & { examples: string[] } } = {
+const phrases: { [key: number]: DictItem } = {
     1: {
         glyph: '谢天谢地',
         pinyin: 'xiè tiān xiè dì',
@@ -1077,7 +1079,7 @@ const politePhrases: { [key: number]: DictItem } = {
     29: { glyph: '我明白了', pinyin: 'wǒ míngbái le', translation: 'Я понял' },
     30: { glyph: '我不懂', pinyin: 'wǒ bù dǒng', translation: 'Я не понимаю' }
 };
-const prepositions: { [key: number]: DictItem & { examples: string[] } } = {
+const prepositions: { [key: number]: DictItem } = {
     1: {
         glyph: '在...上',
         pinyin: 'zài...shàng',
@@ -1360,7 +1362,7 @@ const modalVerbs: { [key: number]: DictItem } = {
         ]
     }
 };
-const nouns: { [key: number]: DictItem & { examples: string[] } } = {
+const nouns: { [key: number]: DictItem } = {
     // Время суток
     1: {
         glyph: '早上',
@@ -2205,7 +2207,7 @@ const nouns: { [key: number]: DictItem & { examples: string[] } } = {
         ]
     }
 };
-const colors: { [key: number]: DictItem & { examples: string[] } } = {
+const colors: { [key: number]: DictItem } = {
     1: {
         glyph: '红色',
         pinyin: 'hóngsè',
@@ -2436,14 +2438,6 @@ const colors: { [key: number]: DictItem & { examples: string[] } } = {
             '设计师喜欢用渐变色。 (Shèjìshī xǐhuān yòng jiànbiànsè.) — Дизайнеры любят использовать цветовые переходы.'
         ]
     }
-};
-
-// Тип для элемента словаря
-type DictItem = {
-    glyph: string;
-    pinyin: string;
-    translation: string;
-    examples?: string[];
 };
 
 // Общий словарь

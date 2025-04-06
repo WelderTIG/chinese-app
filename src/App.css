@@ -95,3 +95,35 @@
     padding: 1.5rem;
   }
 }
+
+.dictionary-selector {
+  margin: 1rem 0;
+}
+
+.dictionary-select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #cbd5e0;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.dictionary-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .dictionary-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dictionary-select {
+    width: 100%;
+  }
+}
