@@ -7,6 +7,7 @@ const grammarFiles = [
     { name: 'Основы грамматики', file: 'grammar.md' },
     { name: 'Прилагательные и притяжательные конструкции', file: 'grammar2.md' },
     { name: 'Модальные глаголы', file: 'modalVerbs.md' },
+    { name: 'Таблица ключей', file: 'radicals.md' },
 ];
 
 const GrammarSection: React.FC = () => {

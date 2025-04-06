@@ -30,6 +30,7 @@ const DictionarySelector: React.FC<DictionarySelectorProps> = ({
         { value: 'modalVerbs', label: 'Модальные глаголы' },
         { value: 'nouns', label: 'Существительные' },
         { value: 'colors', label: 'Цвета' },
+        { value: 'measureWords', label: 'Счетные слова' },
     ];
 
     return (

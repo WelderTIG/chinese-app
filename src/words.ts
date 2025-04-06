@@ -2439,6 +2439,158 @@ const colors: { [key: number]: DictItem } = {
         ]
     }
 };
+const measureWords: { [key: number]: DictItem } = {
+    1: {
+        glyph: '个',
+        pinyin: 'gè',
+        translation: 'универсальное счетное слово',
+        examples: [
+            '一个人 (yī gè rén) — один человек',
+            '三个苹果 (sān gè píngguǒ) — три яблока',
+            '这个问题 (zhè gè wèntí) — эта проблема'
+        ]
+    },
+    2: {
+        glyph: '只',
+        pinyin: 'zhī',
+        translation: 'для животных, птиц, одной из пары',
+        examples: [
+            '一只猫 (yī zhī māo) — одна кошка',
+            '两只狗 (liǎng zhī gǒu) — две собаки',
+            '一只鞋 (yī zhī xié) — один ботинок (из пары)'
+        ]
+    },
+    3: {
+        glyph: '条',
+        pinyin: 'tiáo',
+        translation: 'для длинных предметов, рек, рыб',
+        examples: [
+            '一条河 (yī tiáo hé) — одна река',
+            '两条鱼 (liǎng tiáo yú) — две рыбы',
+            '一条裤子 (yī tiáo kùzi) — одни брюки'
+        ]
+    },
+    4: {
+        glyph: '张',
+        pinyin: 'zhāng',
+        translation: 'для плоских предметов (бумага, столы)',
+        examples: [
+            '一张纸 (yī zhāng zhǐ) — один лист бумаги',
+            '三张桌子 (sān zhāng zhuōzi) — три стола',
+            '一张票 (yī zhāng piào) — один билет'
+        ]
+    },
+    5: {
+        glyph: '本',
+        pinyin: 'běn',
+        translation: 'для книг, тетрадей',
+        examples: [
+            '一本书 (yī běn shū) — одна книга',
+            '两本杂志 (liǎng běn zázhì) — два журнала',
+            '这本字典 (zhè běn zìdiǎn) — этот словарь'
+        ]
+    },
+    6: {
+        glyph: '辆',
+        pinyin: 'liàng',
+        translation: 'для транспортных средств',
+        examples: [
+            '一辆车 (yī liàng chē) — одна машина',
+            '两辆自行车 (liǎng liàng zìxíngchē) — два велосипеда',
+            '这辆公共汽车 (zhè liàng gōnggòng qìchē) — этот автобус'
+        ]
+    },
+    7: {
+        glyph: '件',
+        pinyin: 'jiàn',
+        translation: 'для одежды, дел, вещей',
+        examples: [
+            '一件衣服 (yī jiàn yīfu) — один предмет одежды',
+            '两件事 (liǎng jiàn shì) — два дела',
+            '这件衬衫 (zhè jiàn chènshān) — эта рубашка'
+        ]
+    },
+    8: {
+        glyph: '双',
+        pinyin: 'shuāng',
+        translation: 'для парных предметов',
+        examples: [
+            '一双鞋 (yī shuāng xié) — одна пара обуви',
+            '两双手套 (liǎng shuāng shǒutào) — две пары перчаток',
+            '这双袜子 (zhè shuāng wàzi) — эти носки (пара)'
+        ]
+    },
+    9: {
+        glyph: '杯',
+        pinyin: 'bēi',
+        translation: 'для чашек/стаканов напитков',
+        examples: [
+            '一杯水 (yī bēi shuǐ) — один стакан воды',
+            '两杯咖啡 (liǎng bēi kāfēi) — две чашки кофе',
+            '这杯茶 (zhè bēi chá) — эта чашка чая'
+        ]
+    },
+    10: {
+        glyph: '瓶',
+        pinyin: 'píng',
+        translation: 'для бутылок',
+        examples: [
+            '一瓶啤酒 (yī píng píjiǔ) — одна бутылка пива',
+            '两瓶牛奶 (liǎng píng niúnǎi) — две бутылки молока',
+            '这瓶葡萄酒 (zhè píng pútáojiǔ) — эта бутылка вина'
+        ]
+    },
+    11: {
+        glyph: '碗',
+        pinyin: 'wǎn',
+        translation: 'для чаш/пиал еды',
+        examples: [
+            '一碗饭 (yī wǎn fàn) — одна порция риса',
+            '两碗汤 (liǎng wǎn tāng) — две порции супа',
+            '这碗面条 (zhè wǎn miàntiáo) — эта порция лапши'
+        ]
+    },
+    12: {
+        glyph: '块',
+        pinyin: 'kuài',
+        translation: 'для кусков, денег (юаней)',
+        examples: [
+            '一块蛋糕 (yī kuài dàngāo) — один кусок торта',
+            '两块巧克力 (liǎng kuài qiǎokèlì) — две плитки шоколада',
+            '十块钱 (shí kuài qián) — десять юаней'
+        ]
+    },
+    13: {
+        glyph: '棵',
+        pinyin: 'kē',
+        translation: 'для деревьев, растений',
+        examples: [
+            '一棵树 (yī kē shù) — одно дерево',
+            '两棵花 (liǎng kē huā) — два цветка',
+            '这棵草 (zhè kē cǎo) — эта травинка'
+        ]
+    },
+    14: {
+        glyph: '家',
+        pinyin: 'jiā',
+        translation: 'для семей, компаний, заведений',
+        examples: [
+            '一家人 (yī jiā rén) — одна семья',
+            '两家公司 (liǎng jiā gōngsī) — две компании',
+            '这家餐厅 (zhè jiā cāntīng) — этот ресторан'
+        ]
+    },
+    15: {
+        glyph: '座',
+        pinyin: 'zuò',
+        translation: 'для больших объектов (горы, здания)',
+        examples: [
+            '一座山 (yī zuò shān) — одна гора',
+            '两座桥 (liǎng zuò qiáo) — два моста',
+            '这座楼 (zhè zuò lóu) — это здание'
+        ]
+    }
+};
 
 // Общий словарь
 export const ChineseDictionary = {
@@ -2459,5 +2611,6 @@ export const ChineseDictionary = {
     numbers,
     modalVerbs,
     nouns,
-    colors
+    colors,
+    measureWords
 };
