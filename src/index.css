@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Импорт всех стилей */
+@import './App.css';
+@import './GrammarSection.css';
+@import './DictionaryTable.css';
+@import './FlashCard.css';
+@import './responsive.css';
+@import './MarkdownStyles.css';

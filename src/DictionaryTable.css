@@ -1,0 +1,51 @@
+/* Контейнер таблицы */
+.dictionary-table {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+/* Стили таблицы */
+.dictionary-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+/* Заголовки таблицы */
+.dictionary-table th {
+    background-color: #f7fafc;
+    color: #2d3748;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px dashed #cbd5e0;
+}
+
+/* Ячейки таблицы */
+.dictionary-table td {
+    padding: 1rem;
+    border-bottom: 1px dashed #e2e8f0;
+    vertical-align: top;
+}
+
+/* Чётные строки */
+.dictionary-table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Примеры в таблице */
+.dictionary-table ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.dictionary-table li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Эффект при наведении */
+.dictionary-table tr:hover {
+    background-color: #ebf8ff;
+}

@@ -1,0 +1,40 @@
+/* Стили для таблиц */
+.markdown-container {
+    width: 100%;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.markdown-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.markdown-container th,
+.markdown-container td {
+    padding: 0.75rem 1rem;
+    border: 1px dashed #cbd5e0;
+    /* Пунктирные границы */
+    text-align: left;
+}
+
+.markdown-container th {
+    background-color: #f7fafc;
+    font-weight: 600;
+    border-bottom: 2px dashed #a0aec0;
+    /* Утолщенная пунктирная граница для заголовков */
+}
+
+.markdown-container tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.markdown-container tr:hover {
+    background-color: #ebf8ff;
+}

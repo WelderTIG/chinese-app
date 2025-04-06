@@ -1,0 +1,57 @@
+/* Контейнер карточки */
+.flash-card {
+    width: 100%;
+    max-width: 500px;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.flash-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Содержимое карточки */
+.flash-card .glyph {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.flash-card .pinyin {
+    font-size: 1.5rem;
+    color: #4a5568;
+    margin: 1rem 0;
+}
+
+.flash-card .translation {
+    font-size: 1.25rem;
+    color: #718096;
+}
+
+/* Примеры в карточке */
+.flash-card .examples {
+    margin-top: 1.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.flash-card .example {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+    padding-left: 1rem;
+    border-left: 2px solid #cbd5e0;
+}

@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    .app {
+        padding: 1rem;
+    }
+
+    .card-wrapper {
+        padding: 1.5rem;
+    }
+
+    .grammar-files {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dictionary-table th,
+    .dictionary-table td {
+        padding: 0.75rem;
+    }
+
+    .flash-card {
+        min-height: 250px;
+        padding: 1.5rem;
+    }
+}
