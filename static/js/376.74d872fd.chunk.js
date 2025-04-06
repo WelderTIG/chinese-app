@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkchinese_app=self.webpackChunkchinese_app||[]).push([[376],{376:(e,s,p)=>{e.exports=p.p+"static/media/modalVerbs.fb64e569e722977f5f9a.md"}}]);
