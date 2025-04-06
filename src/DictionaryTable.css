@@ -29,6 +29,12 @@
     vertical-align: top;
 }
 
+/* Увеличиваем шрифт для иероглифов */
+.dictionary-table td:first-child {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
 /* Чётные строки */
 .dictionary-table tr:nth-child(even) {
     background-color: #f8fafc;
@@ -48,6 +54,34 @@
 /* Эффект при наведении */
 .dictionary-table tr:hover {
     background-color: #ebf8ff;
+}
+
+.search-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Компактные стили для поиска и селекта */
+.search-controls input {
+    height: 1.4rem;
+    width: 200px;
+    /* Фиксированная ширина для поиска */
+    padding: 0.5rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.search-controls select {
+    height: 2.5rem;
+    width: 150px;
+    /* Фиксированная ширина для селекта */
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.375rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {
