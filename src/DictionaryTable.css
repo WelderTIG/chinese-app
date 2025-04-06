@@ -1,3 +1,11 @@
+/* DictionaryTable.css */
+.dictionary-table-container {
+    width: 100%;
+    padding: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* Контейнер таблицы */
 .dictionary-table {
     width: 100%;

@@ -24,7 +24,7 @@ const DictionaryTable: React.FC<DictionaryTableProps> = ({ data }) => {
     });
 
     return (
-        <div className="dictionary-table">
+        <div className="dictionary-table-container">
             <div className="search-controls">
                 <input
                     type="text"
@@ -41,7 +41,7 @@ const DictionaryTable: React.FC<DictionaryTableProps> = ({ data }) => {
                     <option value="translation">Перевод</option>
                 </select>
             </div>
-            <table>
+            <table className="dictionary-table">
                 <thead>
                     <tr>
                         <th>Иероглиф</th>
