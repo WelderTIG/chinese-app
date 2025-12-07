@@ -30,17 +30,23 @@
     border-bottom: 2px dashed #cbd5e0;
 }
 
-/* Ячейки таблицы */
-.dictionary-table td {
-    padding: 0.5rem;
-    border-bottom: 1px dashed #e2e8f0;
-    vertical-align: top;
+/* Ячейки таблицы - ИЕРОГЛИФЫ с правильным шрифтом */
+.dictionary-table td:first-child {
+    font-family: var(--hanzi-font);
+    font-size: 2rem;
+    /* Увеличиваем для лучшей видимости */
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.75rem 1rem;
 }
 
-/* Увеличиваем шрифт для иероглифов */
-.dictionary-table td:first-child {
-    font-size: 1.4rem;
-    font-weight: 500;
+/* Остальные ячейки таблицы */
+.dictionary-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px dashed #e2e8f0;
+    vertical-align: top;
+    font-family: var(--text-font);
 }
 
 /* Чётные строки */
@@ -57,6 +63,7 @@
 .dictionary-table li {
     margin-bottom: 0.5rem;
     line-height: 1.5;
+    font-family: var(--text-font);
 }
 
 /* Эффект при наведении */
@@ -80,6 +87,7 @@
     border: 1px solid #cbd5e0;
     border-radius: 0.375rem;
     font-size: 1rem;
+    font-family: var(--text-font);
 }
 
 .search-controls select {
@@ -90,6 +98,7 @@
     border: 1px solid #cbd5e0;
     border-radius: 0.375rem;
     font-size: 1rem;
+    font-family: var(--text-font);
 }
 
 @media (max-width: 768px) {
@@ -119,6 +128,8 @@
         overflow-wrap: break-word;
         word-wrap: break-word;
         white-space: pre-wrap;
+        font-size: 1.6rem;
+        /* Немного меньше на мобильных */
     }
 
     /* Примеры теперь не будут переноситься */

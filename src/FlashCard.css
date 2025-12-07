@@ -23,22 +23,37 @@
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Содержимое карточки */
+/* Содержимое карточки - ИЕРОГЛИФ с правильным шрифтом */
 .flash-card .glyph {
-    font-size: 3rem;
-    font-weight: 600;
+    font-family: var(--hanzi-font);
+    font-size: 4rem;
+    /* Увеличиваем размер для карточек */
+    font-weight: 500;
     color: #2d3748;
+    text-align: center;
 }
 
+/* Пиньинь */
 .flash-card .pinyin {
-    font-size: 1.5rem;
-    color: #4a5568;
+    font-family: var(--text-font);
+    font-size: 1.8rem;
+    /* Увеличиваем для баланса */
+    color: #4299e1;
+    /* Сделаем синим для выделения */
     margin: 1rem 0;
+    font-weight: 600;
+    text-align: center;
 }
 
+/* Перевод */
 .flash-card .translation {
-    font-size: 1.25rem;
-    color: #718096;
+    font-family: var(--text-font);
+    font-size: 1.5rem;
+    /* Увеличиваем */
+    color: #2d3748;
+    /* Более тёмный для лучшей читаемости */
+    font-weight: 500;
+    text-align: center;
 }
 
 /* Примеры в карточке */
@@ -46,6 +61,7 @@
     margin-top: 1.5rem;
     text-align: left;
     width: 100%;
+    font-family: var(--text-font);
 }
 
 .flash-card .example {
@@ -54,6 +70,16 @@
     color: #4a5568;
     padding-left: 1rem;
     border-left: 2px solid #cbd5e0;
+}
+
+/* Для полной карточки */
+.flash-card .full-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -65,16 +91,17 @@
     }
 
     .flash-card .glyph {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        /* Немного меньше на мобильных */
     }
 
     .flash-card .pinyin {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin: 0.75rem 0;
     }
 
     .flash-card .translation {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .flash-card .examples {

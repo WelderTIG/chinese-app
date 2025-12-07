@@ -1,6 +1,8 @@
-/* Стили для таблиц */
+/* Основные стили */
 .markdown-container {
     width: 100%;
+    font-family: var(--text-font);
+    line-height: 1.6;
 }
 
 .table-container {
@@ -9,6 +11,7 @@
     margin: 1rem 0;
 }
 
+/* Все таблицы в markdown */
 .markdown-container table {
     width: 100%;
     border-collapse: collapse;
@@ -20,7 +23,6 @@
 .markdown-container td {
     padding: 0.75rem 1rem;
     border: 1px dashed #cbd5e0;
-    /* Пунктирные границы */
     text-align: left;
 }
 
@@ -28,7 +30,6 @@
     background-color: #f7fafc;
     font-weight: 600;
     border-bottom: 2px dashed #a0aec0;
-    /* Утолщенная пунктирная граница для заголовков */
 }
 
 .markdown-container tr:nth-child(even) {
@@ -37,4 +38,46 @@
 
 .markdown-container tr:hover {
     background-color: #ebf8ff;
+}
+
+/* ВАЖНО: Специальные стили для таблиц с иероглифами */
+.hanzi-table {
+    /* Таблица радикалов получит этот класс */
+}
+
+/* Стиль для ячеек с иероглифами (добавляется через компонент) */
+.hanzi-cell {
+    font-family: var(--hanzi-font) !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    min-width: 60px !important;
+}
+
+/* Альтернативный подход: стиль для второй колонки таблицы радикалов */
+.hanzi-table td:nth-child(2) {
+    font-family: var(--hanzi-font) !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    min-width: 60px !important;
+}
+
+/* Для ячеек, которые содержат ТОЛЬКО иероглифы (без цифр и пробелов) */
+.hanzi-table td:matches(:empty),
+.hanzi-table td:has(> *:only-child) {
+    font-family: var(--hanzi-font) !important;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hanzi-cell {
+        font-size: 1.2rem !important;
+        min-width: 50px !important;
+    }
+
+    .hanzi-table td:nth-child(2) {
+        font-size: 1.2rem !important;
+        min-width: 50px !important;
+    }
 }
