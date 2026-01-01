@@ -2,6 +2,7 @@ export type DictItem = {
     glyph: string;
     pinyin: string;
     translation: string;
+    classifier?: string;
     examples?: string[];
 };
 

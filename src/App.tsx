@@ -3,7 +3,7 @@ import MainPage from './pages/MainPage';
 import './App.css';
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'grammar' | 'vocabulary' | 'memorization'>('grammar');
+  const [activeTab, setActiveTab] = useState<'grammar' | 'vocabulary' | 'memorization' | 'dictionary'>('grammar');
 
   return (
     <div className="app">
@@ -28,6 +28,7 @@ const App: React.FC = () => {
           >
             Запоминание
           </button>
+          <button className={`nav-button ${activeTab === 'dictionary' ? 'active' : ''}`} onClick={() => setActiveTab('dictionary')}>Словарь</button>
         </nav>
       </header>
 
